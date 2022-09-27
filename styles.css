@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --main-bgcol: hsl(217, 54%, 11%);
+    --card-bgcol: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--main-bgcol);
+}
+
+.card {
+    width: 20%;
+    max-height: min-content;
+    color: var(--white);
+    background-color: var(--card-bgcol);
+    border-radius: 15px;
+    padding: 1.3%;
+    margin: 4%;
+    box-shadow: 0px 30px 0px 15px rgba(0, 0, 0, 0.06);
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.main-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.view-icon-div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: hsl(178, 100%, 50%, 45%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.view-icon-div:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.card h3 {
+    margin: 5% 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.card h3:hover {
+    color: var(--cyan);
+}
+
+.card p {
+    font-weight: 300;
+    color: var(--soft-blue);
+    font-size: 14px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.currency, .time {
+    display: flex;
+    font-size: 14px;
+}
+
+.currency .info-text {
+    color: var(--cyan);
+    font-weight: 400;
+}
+
+.info-text {
+    margin-left: 5px;
+}
+
+.creator-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    border-top: 2px solid var(--line);
+    padding-top: 4.5%;
+}
+
+.creator-img {
+    width: 10%;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+
+}
+
+.creator-text {
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.creator-text span {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.creator-text span:hover {
+    color: var(--cyan);
+}
+
+
+.attribution {
+    font-size: 14px;
+    margin: 0 auto 18px auto;
+    position: absolute;
+    bottom: 0;
+    color: var(--soft-blue);
+    text-align: center;
+    width: 100%;
+}
+
+.attribution a {
+    color: var(--soft-blue);
+}
+
+.attribution a:hover {
+    color: var(--cyan);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 80%;
+        padding: 4%;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .card {
+        width: 50%;
+        padding: 2%;
+    }
+    
+}
